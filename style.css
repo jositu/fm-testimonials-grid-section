@@ -1,0 +1,59 @@
+body {
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: hsl(0, 0%, 81%);
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+p {
+    
+}
+
+
+.testimonial {
+    border-radius: 20px;
+}
+
+#test1 {
+    background-color: hsl(263, 55%, 52%);
+}
+
+#test2 {
+    background-color: hsl(217, 19%, 35%);
+}
+
+#test3 {
+    background-color: hsl(0, 0%, 100%);
+}
+
+#test4 {
+    background-color: hsl(219, 29%, 14%);
+}
+
+#test5 {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 600px) {
+
+}
