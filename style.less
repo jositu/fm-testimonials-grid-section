@@ -1,0 +1,223 @@
+//  Variables
+
+// Spacing
+
+@padding-size: 24px;
+
+//  Colors
+
+@mid-violet: hsl(263, 55%, 52%);
+@dark-gray-blue: hsl(217, 19%, 35%);
+@dark-black-blue: hsl(219, 29%, 14%);
+@white: hsl(0, 0%, 100%);
+@light-gray: hsl(0, 0%, 81%);
+@light-gray-blue: hsl(210, 46%, 95%);
+
+// @verif-grad-color: person's name at 50% opacity
+// @review-color: person's name at 70% opacity
+
+// Typography
+
+@font-size: 13px;
+@font-family: 'Barlow Semi Condensed', sans-serif;
+@wgt-reg: 500;
+@wgt-bold: 600;
+
+// Usage
+
+* {
+    box-sizing: border-box;
+    margin: auto;
+    padding: auto;
+}
+
+body {
+    overflow-x: hidden;
+    padding: @padding-size;
+    font-size: @font-size;
+    font-family: @font-family;
+    background-color: @light-gray-blue;
+}
+
+.testimonial {
+    border-radius: 10px;
+    padding: @padding-size;
+
+    img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        // grid-area: img;
+    }
+
+    // h4 {
+    //     grid-area: nam;
+    // }
+
+    // h5 {
+    //     grid-area: ver;
+    // }
+
+    // div {
+    //     display: inline-grid;
+    //     grid-template-areas:
+    //         "img nam"
+    //         "img ver";
+    // }
+
+}
+
+h4 {
+    // Styling for Name
+    font-weight: @wgt-bold;
+    font-size: 1rem;
+}
+
+h5 {
+    // Styling for "Verified Graduate"
+    font-weight: @wgt-reg;
+    font-size: 1rem;
+}
+
+h3 {
+    // Styling for Summary
+    font-weight: @wgt-bold;
+    font-size: 1.25rem;
+}
+
+p {
+    // Styling for Detailed review
+    font-weight: @wgt-reg;
+    font-size: 0.8rem;
+}
+
+#test1 {
+    grid-area: test1;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 80% top;
+
+    h4,
+    h3 {
+        color: @white;
+    }
+
+    h5 {
+        color: fade(@white, 50%);
+    }
+
+    p {
+        color: fade(@white, 50%);
+    }
+}
+
+#test2 {
+    grid-area: test2;
+    background-color: hsl(217, 19%, 35%);
+
+    h4,
+    h3 {
+        color: @white;
+    }
+
+    h5 {
+        color: fade(@white, 50%);
+    }
+
+    p {
+        color: fade(@white, 50%);
+    }
+}
+
+#test3 {
+    grid-area: test3;
+    background-color: hsl(0, 0%, 100%);
+
+    h4,
+    h3 {
+        color: @dark-gray-blue;
+    }
+
+    h5 {
+        color: fade(@dark-gray-blue, 50%);
+    }
+
+    p {
+        color: fade(@dark-gray-blue, 50%);
+    }
+}
+
+#test4 {
+    grid-area: test4;
+    background-color: hsl(219, 29%, 14%);
+
+    h4,
+    h3 {
+        color: @white;
+    }
+
+    h5 {
+        color: fade(@white, 50%);
+    }
+
+    p {
+        color: fade(@white, 50%);
+    }
+}
+
+#test5 {
+    grid-area: test5;
+    background-color: hsl(0, 0%, 100%);
+
+    h4,
+    h3 {
+        color: @dark-gray-blue;
+    }
+
+    h5 {
+        color: fade(@dark-gray-blue, 50%);
+    }
+
+    p {
+        color: fade(@dark-gray-blue, 50%);
+    }
+}
+
+#main {
+    margin: 50px 0px;
+
+    display: grid;
+    column-gap: @padding-size;
+    row-gap: @padding-size;
+    grid-template-areas:
+        "test1"
+        "test2"
+        "test3"
+        "test4"
+        "test5";
+}
+
+.attribution {
+    font-size: @font-size;
+    text-align: center;
+
+    a {
+        color: @mid-violet;
+    }
+}
+
+// Tablet Screen
+@media (min-width: 768px) {
+    #main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "test1 test1 test2 test5"
+            "test3 test4 test4 test5";
+    }
+}
+
+// Desktop Screen
+
+@media (min-width: 1200px) {}
